@@ -49,17 +49,14 @@ func init() {
 
 			CREATE TABLE {{_addresses}} (
 				[[id]]              TEXT PRIMARY KEY NOT NULL,
-				[[admin_id]] 	  	TEXT NOT NULL,
 				[[street]]          TEXT NOT NULL,
 				[[city]]            TEXT NOT NULL,
 				[[state]]        	TEXT NOT NULL,
-				[[zip_code]]    	TEXT NOT NULL,
+				[[zipCode]]    	TEXT NOT NULL,
 				[[country]]    		TEXT NOT NULL,
 				[[lastResetSentAt]] TEXT DEFAULT "" NOT NULL,
 				[[created]]         TEXT DEFAULT (strftime('%Y-%m-%d %H:%M:%fZ')) NOT NULL,
-				[[updated]]         TEXT DEFAULT (strftime('%Y-%m-%d %H:%M:%fZ')) NOT NULL,
-
-				FOREIGN KEY ([[admin_id]]) REFERENCES {{_admins}} ([[id]])
+				[[updated]]         TEXT DEFAULT (strftime('%Y-%m-%d %H:%M:%fZ')) NOT NULL
 			);
 
 			CREATE TABLE {{_collections}} (

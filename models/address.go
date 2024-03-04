@@ -7,7 +7,6 @@ var (
 type Address struct {
 	BaseModel
 
-	AdminID int    `db:"adminID" json:"adminID"`
 	Street  string `db:"street" json:"street"`
 	City    string `db:"city" json:"city"`
 	State   string `db:"state" json:"state"`
