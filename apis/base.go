@@ -120,6 +120,7 @@ func InitApi(app core.App) (*echo.Echo, error) {
 	api := e.Group("/api", eagerRequestInfoCache(app))
 	bindSettingsApi(app, api)
 	bindAdminApi(app, api)
+	bindAddressApi(app, api)
 	bindCollectionApi(app, api)
 	bindRecordCrudApi(app, api)
 	bindRecordAuthApi(app, api)

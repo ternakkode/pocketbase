@@ -47,6 +47,18 @@ func init() {
 				[[updated]]         TEXT DEFAULT (strftime('%Y-%m-%d %H:%M:%fZ')) NOT NULL
 			);
 
+			CREATE TABLE {{_addresses}} (
+				[[id]]              TEXT PRIMARY KEY NOT NULL,
+				[[street]]          TEXT NOT NULL,
+				[[city]]            TEXT NOT NULL,
+				[[state]]        	TEXT NOT NULL,
+				[[zipCode]]    	TEXT NOT NULL,
+				[[country]]    		TEXT NOT NULL,
+				[[lastResetSentAt]] TEXT DEFAULT "" NOT NULL,
+				[[created]]         TEXT DEFAULT (strftime('%Y-%m-%d %H:%M:%fZ')) NOT NULL,
+				[[updated]]         TEXT DEFAULT (strftime('%Y-%m-%d %H:%M:%fZ')) NOT NULL
+			);
+
 			CREATE TABLE {{_collections}} (
 				[[id]]         TEXT PRIMARY KEY NOT NULL,
 				[[system]]     BOOLEAN DEFAULT FALSE NOT NULL,
